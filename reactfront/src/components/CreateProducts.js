@@ -17,6 +17,7 @@ export const CreateProducts = () => {
         navigate('/');
     };
   return (
+    
     <div>
         <h3>Create product</h3>
         <form onSubmit={store}>

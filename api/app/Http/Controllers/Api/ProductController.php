@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
         return $products;
-    }
+    } 
 
     /**
      * Store a newly created resource in storage.

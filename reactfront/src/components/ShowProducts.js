@@ -34,7 +34,10 @@ export const ShowProducts = () => {
             <div className='d-grid gap-2'>
                 <Link to="/create" className='btn btn-success btn-lg mt-2 mb-2'>Crear</Link>
             </div>
-            <table className='table table-striped'>
+            <div>
+                
+            </div>
+            <table className='table table-striped table-success '>
                 <thead className='bg-primary text-white'>
                     <tr>
                         <th>Descripción</th>
@@ -50,8 +53,9 @@ export const ShowProducts = () => {
                             <td>{product.price}</td>
                             <td>{product.stock}</td>
                             <td>
-                                <Link to={`/edit/${product.id}`} className='btn btn-warning'>Edit</Link>
-                                <button onClick={() => deleteProduct(product.id)} className='btn btn-danger'>Delete</button>
+                                <Link to={`/edit/${product.id}`} className='btn btn-warning'>Editar</Link>
+                                <button style={{ marginLeft: '30px' }} onClick={() => deleteProduct(product.id)} className='btn btn-danger'>Eliminar</button>
+                                
                             </td>
                         </tr>
                     )}
