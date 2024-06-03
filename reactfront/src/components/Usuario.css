@@ -1,0 +1,45 @@
+/* src/components/Usuario.css */
+
+/* Estilos para el contenedor principal */
+.row {
+    margin-top: 20px; /* Margen superior para separar del contenido superior */
+  }
+  
+  /* Estilos para la columna izquierda */
+  .col-sm-4 {
+    background-color: #f8f9fa; /* Color de fondo para la columna izquierda */
+    padding: 10px; /* Espaciado interno */
+    height: calc(100vh - 40px); /* Establece la altura de la columna izquierda */
+    border-right: 1px solid #ccc; /* Línea divisoria a la derecha */
+  }
+  
+  /* Estilos para la columna derecha */
+  .col-sm-8 {
+    padding: 10px; /* Espaciado interno */
+    height: calc(100vh - 40px); /* Establece la altura de la columna derecha */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
+  }
+  
+  /* Estilos para los enlaces de navegación vertical */
+  .nav-link {
+    color: #fff; /* Color inicial del texto (blanco) */
+    text-decoration: none; /* Elimina la decoración de subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+  }
+  
+  /* Estilos para los enlaces de navegación al pasar el cursor */
+  .nav-link:hover {
+    color: #007bff; /* Color del texto al pasar el cursor (azul) */
+    text-decoration: underline; /* Subraya el texto al pasar el cursor */
+  }
+  
+  /* Estilos para los cuadros de contenido en la columna derecha */
+  .content-box {
+    background-color: #e9ecef; /* Color de fondo del cuadro */
+    margin-bottom: 20px; /* Espacio entre los cuadros */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 100%; /* Abarca toda la columna */
+  }
+  

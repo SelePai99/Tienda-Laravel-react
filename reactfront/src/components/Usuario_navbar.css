@@ -1,0 +1,16 @@
+/* Usuario_navbar.css */
+
+.usuario-navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    margin-left: 80px; /* Agrega un margen a la izquierda del logo */
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  

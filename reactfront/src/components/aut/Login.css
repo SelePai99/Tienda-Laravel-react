@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url('../../assets/ropa2.jpeg.jpg')
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signUp h1 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.input-bordered {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-bordered label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #888;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.input-bordered input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+  font-size: 1em;
+}
+
+.input-bordered input:focus {
+  border-color: #008c9e;
+}
+
+.input-bordered input:focus + label,
+.input-bordered input:not(:placeholder-shown) + label {
+  top: -15px;
+  left: 10px;
+  font-size: 0.8em;
+  color: #008c9e;
+  background: white;
+  padding: 0 5px;
+}
+
+input[type='submit'] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #008c9e;
+  background-color: #fff;
+  color: #008c9e;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type='submit']:hover {
+  background-color: #008c9e;
+  color: white;
+}
+
+p {
+  margin-top: 20px;
+  color: red;
+  text-align: center;
+}

@@ -1,0 +1,49 @@
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste para mayor flexibilidad */
+    gap: 10px; /* Espacio entre los productos */
+    padding: 20px;
+    justify-content: center; /* Centrar los productos horizontalmente */
+    margin-left: 40px; /* Agrega espacio extra a la izquierda */
+    margin-right: 40px; /* Agrega espacio extra a la derecha */
+  }
+  
+  @media (max-width: 768px) {
+    .products-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño mínimo de los productos en pantallas más pequeñas */
+      gap: 10px; /* Reducir el espacio entre los productos en pantallas más pequeñas */
+      padding: 10px;
+    }
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Asegura que el producto ocupe todo el ancho disponible */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Animación al pasar el mouse */
+  }
+  
+  .product:hover {
+    transform: scale(1.05); /* Agrandar el producto al pasar el mouse */
+  }
+  
+  .product img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio asignado */
+    border-radius: 10px;
+  }
+  
+  .product h2 {
+    font-size: 1.5em; /* Aumentar el tamaño del nombre del producto */
+    margin: 10px 0;
+  }
+  
+  .product p {
+    font-size: 1.2em; /* Aumentar el tamaño del rating y el precio */
+    color: #333;
+  }
+  

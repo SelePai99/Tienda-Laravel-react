@@ -28,9 +28,13 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
+        $welcomeMessage = "Bienvenido, " . $user->name . "! Tu registro fue exitoso. Te hemos enviado un correo de confirmación a " . $user->email . ".";
+
 
         return response()->json([
-            "message" => "Metodo registro ok"
+            
+            "message" => $welcomeMessage
+
 
         ]);
 

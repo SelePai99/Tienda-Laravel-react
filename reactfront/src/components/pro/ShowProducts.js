@@ -30,14 +30,13 @@ export const ShowProducts = () => {
     };
 
     return (
-        <div>
+        <div className='container-fluid p-2 '>
             <div className='d-grid gap-2'>
                 <Link to="/create" className='btn btn-success btn-lg mt-2 mb-2'>Crear</Link>
             </div>
-            <div>
-                
-            </div>
-            <table className='table table-striped table-success '>
+
+            <di className="container center">
+            <table className='table table-striped table-success w-75'>
                 <thead className='bg-primary text-white'>
                     <tr>
                         <th>Descripción</th>
@@ -61,6 +60,10 @@ export const ShowProducts = () => {
                     )}
                 </tbody>
             </table>
+
+            </di>
+
+          
         </div>
     );
 };
