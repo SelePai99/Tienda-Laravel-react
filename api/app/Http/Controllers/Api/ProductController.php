@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-
 class ProductController extends Controller
 {
     /**
@@ -23,12 +22,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // Validar la información de la solicitud
+        $validatedData = $request->validate([
+            'description' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'stock' => 'required|integer'
+        ]);
+
+        // Crear un nuevo producto usando los datos validados
         $product = new Product();
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->stock = $request->stock;
+        $product->description = $validatedData['description'];
+        $product->price = $validatedData['price'];
+        $product->stock = $validatedData['stock'];
 
         $product->save();
+
+        // Devolver una respuesta adecuada
+        return response()->json($product, 201);
     }
 
     /**
@@ -45,10 +55,17 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        // Validar la información de la solicitud
+        $validatedData = $request->validate([
+            'description' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'stock' => 'required|integer'
+        ]);
+
         $product = Product::findOrFail($id);
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->stock = $request->stock;
+        $product->description = $validatedData['description'];
+        $product->price = $validatedData['price'];
+        $product->stock = $validatedData['stock'];
 
         $product->save();
         return $product;
