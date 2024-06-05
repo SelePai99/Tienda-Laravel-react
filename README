@@ -1,23 +1,27 @@
-
 Instrucciones para la pagina web Belleza y estilo
 
 Tener en cuenta que la version de la php debe ser igual o mayor a la version php-8.2
 
-1. Instalar migraciones en laravel
-   cd api
-   php artisan migrate
-2.  Para correr el servicio de api laravael
+Installar compose
+      composer install
+      npm install -g create-react-app
+      npm install
+1.  Para correr el servicio de api laravael
+     cd api
      php artisan serve
-3. Para correr el servicio de react
-cd reactfront
-npm start
+2. Para correr el servicio de react
+    cd reactfront
+    npm start
 
 Se pueden visualizar por el puerto
 laravel: http://127.0.0.1:8000
 react: http://localhost:3000
 
 
+*Opcional*
+En caso de que al correr la aplicacion le arroje error de base de datos hay que correr las migraciones
 
+   php artisan migrate
 
 Integrantes:
 
