@@ -24,12 +24,10 @@ const NavBar = () => {
       <div className="sub-nav-bar">
         <nav>
           <ul>
-            <li><Link to="/usuario">Activate</Link></li>
-            <li><Link to="/CreateProducts">Crear producto</Link></li>
-
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Deseable</a></li>
+            <li><Link to="/usuario">Cuidado Personal</Link></li>
+            <li><a href="#">Tratamiento facial</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><Link to="/pro">Crear producto</Link></li>
           </ul>
         </nav>
       </div>

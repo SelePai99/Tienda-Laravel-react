@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './createpro.css';
 
 const endpoint = "http://localhost:8000/api/products";
 
@@ -17,7 +18,7 @@ export const CreateProducts = () => {
   };
   return (
     <div className="container-fluid p-2 ">
-      <form onSubmit={store} className="my-form bg-danger">
+      <form onSubmit={store} className="my-form bg-secondary">
         <fieldset className="my-fieldset">
           <legend className="my-legend">Crear productos</legend>
           <div className="contaier text-start mb-3">

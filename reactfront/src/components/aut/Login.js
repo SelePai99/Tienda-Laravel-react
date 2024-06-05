@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [token, setToken] = useState('');
+
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,8 +21,10 @@ const Login = () => {
         email,
         password,
       });
+
+
       setToken(response.data.token);
-      setMessage('Login successful');
+      setMessage('Inicio de sesión correcto');
       localStorage.setItem('token', response.data.token);
     } catch (error) {
       if (error.response) {
@@ -54,7 +61,7 @@ const Login = () => {
                 required
                 placeholder=' '
               />
-              <label htmlFor='emailaddress'>Email Address</label>
+              <label htmlFor='emailaddress'>Email</label>
             </div>
           </div>
           <div className='field'>
@@ -69,14 +76,17 @@ const Login = () => {
                 required
                 placeholder=' '
               />
-              <label htmlFor='password'>Password</label>
+              <label htmlFor='password'>Contraseña</label>
             </div>
           </div>
           <div className='field'>
             <input type='submit' value='Ingresar' />
           </div>
+          
         </form>
         {message && <p>{message}</p>}
+        <p>¿Necesitas crear tu cuenta ? <Link to="/register">Registrate</Link></p>  {/* Botón con enlace */}
+
       </div>
     </div>
   );

@@ -1,0 +1,66 @@
+/* createpro.css */
+
+/* Container fluid padding */
+
+.container-fluid.p-2 {
+    padding: 2rem;
+
+}
+
+/* Button styling */
+.d-grid.gap-2 .btn {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+/* Centered container */
+.container.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* Table styling */
+.table.table-striped.table-success {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.table.table-striped.table-success thead {
+    background-color: #007bff; /* Primary background color */
+    color: white;
+}
+
+.table.table-striped.table-success tbody tr:nth-child(even) {
+    background-color: #d4edda; /* Success background color for even rows */
+}
+
+.table.table-striped.table-success tbody tr:nth-child(odd) {
+    background-color: white; /* White background color for odd rows */
+}
+
+.table.table-striped.table-success th, 
+.table.table-striped.table-success td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Button inside table */
+.table .btn {
+    margin-right: 1rem;
+}
+
+.table .btn-warning {
+    background-color: #ffc107; /* Warning background color */
+    border: none;
+}
+
+.table .btn-danger {
+    background-color: #dc3545; /* Danger background color */
+    border: none;
+}

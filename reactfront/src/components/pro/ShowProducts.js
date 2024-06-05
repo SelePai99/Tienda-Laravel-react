@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'; // Asegúrate de que Link esté importado correctamente
+import './createpro.css'
 
 const endpoint = 'http://localhost:8000/api';
 
@@ -35,8 +36,8 @@ export const ShowProducts = () => {
                 <Link to="/create" className='btn btn-success btn-lg mt-2 mb-2'>Crear</Link>
             </div>
 
-            <di className="container center">
-            <table className='table table-striped table-success w-75'>
+            <di className="container">
+            <table className='table table-striped table-success w-50'>
                 <thead className='bg-primary text-white'>
                     <tr>
                         <th>Descripción</th>
