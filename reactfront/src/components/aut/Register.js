@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Register.css'; // Importa el archivo CSS aquí
+import { Link } from 'react-router-dom';
+
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -8,6 +10,7 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [message, setMessage] = useState('');
+
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -27,12 +30,12 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
+    <div className="register-container center">
       <div className="register-box">
-        <h2>Register</h2>
+        <h1>Registrarse</h1>
         <form onSubmit={handleRegister}>
           <div className="form-group">
-            <label>Name:</label>
+            <label>Nombre:</label>
             <input
               type="text"
               value={name}
@@ -50,7 +53,7 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            <label>Password:</label>
+            <label>Contraseña:</label>
             <input
               type="password"
               value={password}
@@ -59,7 +62,7 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            <label>Confirm Password:</label>
+            <label>Confirmar Contraseña:</label>
             <input
               type="password"
               value={passwordConfirmation}
@@ -67,9 +70,10 @@ const Register = () => {
               required
             />
           </div>
-          <button type="submit">Register</button>
+          <button type="submit">Registrar</button>  
         </form>
         {message && <p>{message}</p>}
+        <p>¿Ya tienes una cuenta? <Link to="/login">Inicia sesión aquí</Link></p>  {/* Botón con enlace */}
       </div>
     </div>
   );

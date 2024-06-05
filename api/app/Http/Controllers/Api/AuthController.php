@@ -37,6 +37,7 @@ class AuthController extends Controller
 
 
         ]);
+        
 
     }
 
@@ -57,7 +58,7 @@ class AuthController extends Controller
         }else{
             return response(["message" =>"Credenciales invalida"],HttpResponse::HTTP_UNAUTHORIZED);
         }
-        
+
     }
     public function userProfile(Request $request){
 

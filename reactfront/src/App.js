@@ -40,6 +40,8 @@ const Main = () => {
         <Route path='/edit/:id' element={ <EditProducts/> }/>
         <Route path="/delete/:id" element={<DeleteProducts />} />
         <Route path="/CreateProducts" element={<CreateProducts />} />
+
+
       </Routes>
     </div>
   );

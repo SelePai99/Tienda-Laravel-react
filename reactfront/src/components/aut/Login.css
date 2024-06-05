@@ -23,7 +23,7 @@ body, html {
 .signUp {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 150%;
   max-width: 600px;
   padding: 40px;
   background: rgba(255, 255, 255, 0.9);
@@ -50,7 +50,7 @@ body, html {
   position: absolute;
   top: 10px;
   left: 10px;
-  color: #888;
+  color: #080707;
   transition: 0.2s;
   pointer-events: none;
 }
@@ -66,7 +66,7 @@ body, html {
 }
 
 .input-bordered input:focus {
-  border-color: #008c9e;
+  border-color: #000000;
 }
 
 .input-bordered input:focus + label,
@@ -74,7 +74,7 @@ body, html {
   top: -15px;
   left: 10px;
   font-size: 0.8em;
-  color: #008c9e;
+  color: #080808;
   background: white;
   padding: 0 5px;
 }
@@ -98,6 +98,6 @@ input[type='submit']:hover {
 
 p {
   margin-top: 20px;
-  color: red;
+  color: rgb(10, 10, 10);
   text-align: center;
 }
